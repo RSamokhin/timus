@@ -66,7 +66,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="268" selection-end="268" vertical-scroll-proportion="0.25373134">
+            <state line="6" column="0" selection-start="108" selection-end="207" vertical-scroll-proportion="0.1522388">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,6 +122,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,7 +134,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,6 +317,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="29" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="62" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
@@ -344,7 +353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="268" selection-end="268" vertical-scroll-proportion="0.25373134">
+        <state line="6" column="0" selection-start="108" selection-end="207" vertical-scroll-proportion="0.1522388">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
