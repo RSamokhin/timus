@@ -6,12 +6,14 @@ public class Main {
     {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-        int result = 0;
-        int n = in.nextInt();
+        int result_a;
+        int result_b;
         int a = in.nextInt();
         int b = in.nextInt();
-        result = 2*n*a*b;
-        out.println(result);
+        result_a = b-1;
+        result_b = a-1;
+        out.println(result_a);
+        out.println(result_b);
         out.flush();
     }
 }
