@@ -7,34 +7,40 @@ public class Main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int [] a = new  int[3];
-        ArrayList<Integer[]> numbers_list = new ArrayList<Integer[]>();
+        int [][] numbers_list = new int[3][4001];
         for (int i = 0 ; i < 3 ; i ++){
-             a[i] = in.nextInt();
-             for (int j = 0 ; j < a[i] ; j++){
-                  int number = in.nextInt();
-                  boolean added = false;
-                  for(Integer[] tmp :numbers_list){
-                      if (tmp[0] == number){
-                          tmp[1] ++;
-                          added = true;
-                      }
-                  }
-                  if (!added){
-                      Integer [] new_number = {number,1};
-                      numbers_list.add(new_number);
-                  }
-             }
+            a[i] = in.nextInt();
+            for(int j = 0 ; j < a[i] ; j++){
+                numbers_list[i][j] = in.nextInt();
+            }
         }
         int result = 0;
-        while (!numbers_list.isEmpty()){
-            if (numbers_list.get(0)[1] == 3){
-                result ++;
-                numbers_list.remove(0);
-            }else{
-                numbers_list.remove(0);
+        int i = 0;
+        int check_int = numbers_list[0][i];
+        while (check_int>0){
+            check_int = numbers_list[0][i];
+            int j = 0;
+            int enough = 0;
+            while ((numbers_list[1][j]<=check_int)&&(j<numbers_list[1].length)&&(enough==0)&&(numbers_list[1][j]>0)){
+                 if (numbers_list[1][j]==check_int) {
+                    enough ++;
+                }
+                j++;
             }
+            j=0;
+            while ((numbers_list[2][j]<=check_int)&&(j<numbers_list[2].length)&&(enough==1)&&(numbers_list[2][j]>0)){
+                if (numbers_list[2][j]==check_int) {
+                    enough ++;
+                }
+                j++;
+            }
+            if (enough == 2) {
+                result++;
+            }
+            i++;
         }
         out.println(result);
         out.flush();
     }
 }
+
