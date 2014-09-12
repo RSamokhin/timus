@@ -7,10 +7,25 @@ public class Main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
-
+        int[][] m = new int[n][n];
+        for(int i = 0 ; i < n ; i++){
+            for (int j = 0 ; j < n ; j++){
+                m[i][j] = in.nextInt();
+            }
+        }
         
-        
-        //out.println(result);
+        for (int f = 0 ; f <= n*2-2 ; f++){
+            for(int i = 0 ; i < n ; i++){
+                for (int j = 0 ; j < n ; j++){
+                    if (i+j==f){
+                        out.print(m[j][i]);
+                        out.print (' ');
+                    }
+                    if (i+j>f)
+                         break;
+                 }
+            }
+        }
         out.flush();
     }
 } 
