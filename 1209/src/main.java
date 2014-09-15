@@ -7,28 +7,31 @@ public class main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
-        int [] a = new int[n];
-        for (int m = 0 ; m < n ; m++){
-            a[m] = in.nextInt();
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int q = 0 ; q < n ; q++){
+            list.add(in.nextInt());
         }
-        for(int j = 0 ; j < n ; j++){
-            int i = a [j];
-            int k = 0;
-            int s = 0;
-            while(s < i){
-                s = s +k;
-                k++;
-            }
-            if (s==i){
-                out.println(1);
-            }else{
+        Collections.sort(list);
+        int k = 0;
+        int s = 0; 
+        while(list.size()>0){
+            int c = list.get(0);
+            if (s>c){
                 out.println(0);
+                list.remove(0);
+            }else{
+                while(s < c){
+                    s = s + k;
+                    k++;
+                }
+                if (s==c-1){
+                    out.println(1);
+                }else{
+                    out.println(0);
+                }
+                list.remove(0);
             }
         }
         out.flush();
     }
 }
-
-//1101001000100001000001000000
-//01 3  6   10   15    21
-//01 2  3   4    5     6
