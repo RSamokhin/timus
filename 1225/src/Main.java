@@ -9,7 +9,6 @@ public class Main {
         int n = in.nextInt(); //fibb 2-2-4-6-10
         long f0=0, f1=1;      
         long fn=f1;
-        if (n > 2){
             for (int i = 2 ; i <n ; i++){
                 long t=f1;
                 fn = fn+f1;
@@ -17,9 +16,6 @@ public class Main {
                 f0=t;
                  
             }
-        }else{
-            fn = f1;
-        }
         out.println(2*fn);
         out.flush();
     }
