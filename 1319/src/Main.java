@@ -7,8 +7,21 @@ public class Main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
-        long s = ((n<0)? (-1) : 1)*(n*(n+((n<2)? (-1) : 1))/2) + ((n<2) ? 1 : 0);
-        out.println(s);
+        int f = 0;
+        int [][] a = new int [n][n];
+        for (int m = 0 ; m <= (n-1)*2 ; m ++){
+            for (int i = 0, j = m; ((i<=m)) ;i++,j--){
+                if ((i<n)&&(j<n))
+                    a[i][j]=++f;
+            }
+        }
+        for (int v = 0 ; v < n ; v++){
+            for (int b = n-1 ; b >=0 ; b--){
+                out.print(a[v][b]);
+                out.print(' ');
+            }
+            out.println();
+        }
         out.flush();
     }
 }
