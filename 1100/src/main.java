@@ -7,21 +7,23 @@ public class main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
-        int[][]  q = new int[n][2];
-        for (int i = 0 ; i < n ; i++){
-            q[i][0] = in.nextInt();
-            q[i][1] = in.nextInt();
+        ArrayList<ArrayList<Integer>> a = new ArrayList<>();
+        for (int i = 0 ; i < 100 ; i++){
+            ArrayList<Integer> b = new ArrayList<>();
+            a.add(i, b);
         }
-        Arrays.sort(q, new Comparator<int[]>() {
-                @Override
-                public int compare(int[] o1, int[] o2) {
-                    return Integer.compare(o2[1], o1[1]);
-                }
-        });        
-       // out.println("+++++++++");
         for (int j = 0 ; j < n ; j++){
-            out.println(q[j][0]+" "+q[j][1]);
-        }
+            int id = in.nextInt();
+            int m = in.nextInt();
+            ArrayList<Integer> t = a.get(m-1);
+            t.add(id);
+            a.set(m-1, t);
+        }   
+        for (int k = 99 ; k >= 0 ;k--){
+            for (int h = 0 ; h < a.get(k).size(); h++){
+                out.println( a.get(k).get(h) + " " + (k+1)) ;
+            }
+        }     
         out.flush();
     }
 } 
