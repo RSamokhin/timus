@@ -7,22 +7,23 @@ public class main {
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
         List<Integer[]> a = new ArrayList<>();
-        for (int i = 0 ; i < n ; i ++){
+        for (int i = 0 ; i < n ; i++){
             int id = in.nextInt(), m = in.nextInt();
-            int f = 0;
-            int l = i;
-            while (f!=l){                                             
-                if (a.get((l-f)/2+f)[1]<m){                   
-                    f = l/2;
+            int l = 0;
+            int j = i;
+           // out.println("j = "+ j + "  l = " + l);
+            while (j!=l){               
+                if (a.get((j-l)/2+l)[1]>=m){                   
+                    l=(j-l)/2+l+1;
                 }else{
-                    l = l/2+1;
+                    j = (j-l)/2+l;
                 }
             }
             Integer [] b = new Integer[2];
             b[0]=id;b[1]=m;
-            a.add(f,b);
+            a.add(j,b);
         }
-        out.println("======");
+       // out.println("======");
         for (int t = 0 ; t < n ; t++){
             out.print(a.get(t)[0]);
             out.print(" ");
