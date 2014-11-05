@@ -6,7 +6,7 @@ public class main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
-        List<Integer[]> a = new ArrayList<>();
+        LinkedList<Integer[]> a = new LinkedList<>();
         for (int i = 0 ; i < n ; i++){
             int id = in.nextInt(), m = in.nextInt();
             int l = 0;
