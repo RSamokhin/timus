@@ -20,8 +20,10 @@ public class main {
             a.set(m, t);
         }   
         for (int k = 100 ; k >= 0 ;k--){
-            for (int h = 0 ; h < a.get(k).size(); h++){
-                out.println( a.get(k).get(h) + " " + (k)) ;
+            ArrayList<Integer> c = a.get(k);
+            int s  = c.size();
+            for (int h = 0 ; h < s; h++){
+                out.println( c.get(h) + " " + (k)) ;
             }
         }     
         out.flush();
