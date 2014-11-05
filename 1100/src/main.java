@@ -8,20 +8,20 @@ public class main {
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
         ArrayList<ArrayList<Integer>> a = new ArrayList<>();
-        for (int i = 0 ; i < 100 ; i++){
+        for (int i = 0 ; i <= 100 ; i++){
             ArrayList<Integer> b = new ArrayList<>();
             a.add(i, b);
         }
         for (int j = 0 ; j < n ; j++){
             int id = in.nextInt();
             int m = in.nextInt();
-            ArrayList<Integer> t = a.get(m-1);
+            ArrayList<Integer> t = a.get(m);
             t.add(id);
-            a.set(m-1, t);
+            a.set(m, t);
         }   
-        for (int k = 99 ; k >= 0 ;k--){
+        for (int k = 100 ; k >= 0 ;k--){
             for (int h = 0 ; h < a.get(k).size(); h++){
-                out.println( a.get(k).get(h) + " " + (k+1)) ;
+                out.println( a.get(k).get(h) + " " + (k)) ;
             }
         }     
         out.flush();
