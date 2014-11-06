@@ -8,7 +8,7 @@ public class main {
         PrintWriter out = new PrintWriter(System.out);
         int a = in.nextInt();
         int b = in.nextInt();
-        out.println((b+1)/2 + a/2);  
+        out.println((b+1)/2 - a/2);  
         out.flush();
     }
 } 
