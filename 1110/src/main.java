@@ -6,11 +6,11 @@ public class main {
     {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-        int n = in.nextInt(), m = in.nextInt(), y = in.nextInt();
-        ArrayList<Integer> a = new ArrayList<>();
-        for (int x = 0 ; x < m ; x++)
+        long n = in.nextInt(), m = in.nextInt(), y = in.nextInt();
+        ArrayList<String> a = new ArrayList<>();
+        for (long x = 0 ; x < m ; x++)
             if (Math.pow((x%m),n)%m==y)
-                a.add(x);
+                a.add(String.valueOf(x));
         if (a.size()>0)
             a.stream().forEach((f) -> {
                 out.print(f+" ");
