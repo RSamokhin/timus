@@ -17,19 +17,22 @@ public class main {
             int m = in.nextInt();
             ArrayList<Integer> t = a.get(m);
             t.add(id);
-            a.set(m, t);
         }   
         StringBuilder d = new StringBuilder("");
         for (int k = 100 ; k >= 0 ;k--){
             ArrayList<Integer> c = a.get(k);
             int s  = c.size();
             for (int h = 0 ; h < s; h++){
-                //out.println( c.get(h) + " " + (k)) ;
                 d.append(c.get(h));
                 d.append(" ");
                 d.append(k);
                 d.append("\n");
+                if (d.length()>8000){
+                    out.println(d);
+                    d.setLength(0);
+                }
             }
+            
         }  
         out.println(d);
         out.flush();
