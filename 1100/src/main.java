@@ -19,13 +19,19 @@ public class main {
             t.add(id);
             a.set(m, t);
         }   
+        StringBuilder d = new StringBuilder("");
         for (int k = 100 ; k >= 0 ;k--){
             ArrayList<Integer> c = a.get(k);
             int s  = c.size();
             for (int h = 0 ; h < s; h++){
-                out.println( c.get(h) + " " + (k)) ;
+                //out.println( c.get(h) + " " + (k)) ;
+                d.append(c.get(h));
+                d.append(" ");
+                d.append(k);
+                d.append("\n");
             }
-        }     
+        }  
+        out.println(d);
         out.flush();
     }
 } 
