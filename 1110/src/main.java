@@ -8,14 +8,9 @@ public class main {
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt(), m = in.nextInt(), y = in.nextInt();
         ArrayList<Integer> a = new ArrayList<>();
-        for (int x = 0 ; x < m ; x++){
-            int j=1;
-            for (int i = 0 ; i < n ; i++){
-                j = j * (x%m);
-            }
-            if (j%m==y)
+        for (int x = 0 ; x < m ; x++)
+            if (Math.pow((x%m),n)%m==y)
                 a.add(x);
-        }
         if (a.size()>0)
             a.stream().forEach((f) -> {
                 out.print(f+" ");
