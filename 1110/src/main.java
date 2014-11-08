@@ -11,12 +11,13 @@ public class main {
         BigInteger y = in.nextBigInteger();
         ArrayList<String> a = new ArrayList<>();
         StringBuilder d = new StringBuilder("");
+        BigInteger ms = new BigInteger(String.valueOf(m));
         for (int j = 0 ; j < m ; j++){
             BigInteger r = new BigInteger("1");
+            BigInteger g = new BigInteger(String.valueOf(j));
             for (int i = 1 ; i <= n ; i++){
-                r = r.multiply(new BigInteger(String.valueOf(j)));
+                r = r.multiply(g);
             }
-            BigInteger ms = new BigInteger(String.valueOf(m));
             if (r.mod(ms).equals(y)){
                 a.add(String.valueOf(j));
             }
