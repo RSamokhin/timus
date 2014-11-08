@@ -1,4 +1,5 @@
 import java.io.*;
+import java.math.BigInteger;
 import java.util.*;
 
 public class main {
@@ -6,11 +7,19 @@ public class main {
     {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-        long n = in.nextInt(), m = in.nextInt(), y = in.nextInt();
+        int n = in.nextInt(), m = in.nextInt(); 
+        BigInteger y = in.nextBigInteger();
         ArrayList<String> a = new ArrayList<>();
-        for (long x = 0 ; x < m ; x++)
-            if (Math.pow((x%m),n)%m==y)
-                a.add(String.valueOf(x));
+        for (int j = 0 ; j < m ; j++){
+            BigInteger r = new BigInteger("1");
+            for (int i = 1 ; i <= n ; i++){
+                r = r.multiply(new BigInteger(String.valueOf(j)));
+            }
+            BigInteger ms = new BigInteger(String.valueOf(m));
+            if (r.mod(ms).equals(y)){
+                a.add(String.valueOf(j));
+            }
+        }
         if (a.size()>0)
             a.stream().forEach((f) -> {
                 out.print(f+" ");
