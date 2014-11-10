@@ -15,12 +15,7 @@ public class main {
         BigInteger ms = new BigInteger(String.valueOf(m));
         for (int j = 0 ; j < m ; j++){
             BigInteger r = new BigInteger(String.valueOf(j));
-            BigInteger g = new BigInteger(String.valueOf(j));
             r = r.modPow(n, ms);
-
-            /*for (int i = 1 ; i <= n ; i++){
-                r = r.multiply(g);
-            };*/
             if (r.equals(y)){
                 a.add(String.valueOf(j));
             }
