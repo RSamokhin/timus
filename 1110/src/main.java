@@ -7,18 +7,21 @@ public class main {
     {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-        int n = in.nextInt(), m = in.nextInt(); 
+        BigInteger n = in.nextBigInteger(); 
+        int m = in.nextInt(); 
         BigInteger y = in.nextBigInteger();
         ArrayList<String> a = new ArrayList<>();
         StringBuilder d = new StringBuilder("");
         BigInteger ms = new BigInteger(String.valueOf(m));
         for (int j = 0 ; j < m ; j++){
-            BigInteger r = new BigInteger("1");
+            BigInteger r = new BigInteger(String.valueOf(j));
             BigInteger g = new BigInteger(String.valueOf(j));
-            for (int i = 1 ; i <= n ; i++){
+            r = r.modPow(n, ms);
+
+            /*for (int i = 1 ; i <= n ; i++){
                 r = r.multiply(g);
-            }
-            if (r.mod(ms).equals(y)){
+            };*/
+            if (r.equals(y)){
                 a.add(String.valueOf(j));
             }
         }
