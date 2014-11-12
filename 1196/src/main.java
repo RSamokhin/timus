@@ -18,9 +18,9 @@ public class main {
             long t = in.nextInt();
             if (a.containsKey(t)){
                 r++;
-            }
+             }
         }
         out.println(r);
         out.flush();
     }
-}
+}  
