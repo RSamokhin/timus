@@ -22,7 +22,7 @@ public class main {
                 if (a.contains(t)){
                     r++;
                  }
-        }
+        } 
         out.println(r);
         out.flush();
     }
