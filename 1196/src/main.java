@@ -18,7 +18,6 @@ public class main {
             long t = in.nextInt();
             if (a.containsKey(t)){
                 r++;
-                a.remove(t);
             }
         }
         out.println(r);
