@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.TreeSet;
 
 public class main {
     public static void main(String[] args)
@@ -8,19 +9,22 @@ public class main {
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
         int r = 0;
-        Map a = new HashMap<>();
+        TreeSet<Integer> a = new TreeSet<>();
         for (int i = 0 ; i < n ; i++){
-            long y = in.nextInt();
-            a.put(y, 1);
+            int y = in.nextInt();
+            a.add(y);
         }
+        int max = a.last();
+        int min = a.first();
         int m = in.nextInt();
         for (int j = 0 ; j < m ; j ++){
-            long t = in.nextInt();
-            if (a.containsKey(t)){
-                r++;
-             }
+            int t = in.nextInt();
+            if ((t<max)||(t>min))
+                if (a.contains(t)){
+                    r++;
+                 }
         }
         out.println(r);
         out.flush();
     }
-}  
+}
