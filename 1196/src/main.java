@@ -9,21 +9,17 @@ public class main {
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
         int r = 0;
-        int max = 0;
-        int min = 0;
-        HashSet<Integer> a = new HashSet<>();
+        TreeSet<Integer> a = new TreeSet<>();
         for (int i = 0 ; i < n ; i++){
             int y = in.nextInt();
             a.add(y);
-            if (i==0)
-                   min = y;
-            if (i==n-1)
-                   max = y;
         }
+        int max = a.last();
+        int min = a.first();
         int m = in.nextInt();
         for (int j = 0 ; j < m ; j ++){
             int t = in.nextInt();
-            if ((t<max)||(t>min))
+            if ((t<=max)||(t>=min))
                 if (a.contains(t)){
                     r++;
                  }
