@@ -6,7 +6,7 @@ public class main {
     {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-       
+
         out.flush();
     }
 }
