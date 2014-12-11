@@ -10,7 +10,7 @@ public class main {
         int n = 10;
         int[] a = new int[n];
         for(int i = 0 ; i < n ; i++ ){
-            a[i]=(int)(Math.random()*100);
+            a[i]=(int)(Math.random()*1000);
             out.print(a[i]+" ");
         }
         a = mergeSort(a,n);
@@ -48,7 +48,7 @@ public class main {
         return merge(mergeSort(left,middle),mergeSort(right,n-middle));         
         
     }
-    public static int[] merge(int[] a,int[] b){
+    static int[] merge(int[] a,int[] b){
         if (a.length==0)
             return b;
         if (b.length==0)
@@ -59,13 +59,23 @@ public class main {
             for(int i = 0 ; i < r.length ; i++){
                 r[i]= a[i+1];
             }
-            int[] k;
-            IntStream first = (IntStream) IntStream.builder().add(t);
-            IntStream second = Arrays.stream(merge(r,b));
-            k = IntStream.concat(first,second).toArray(int[]::new);
+            return mergeConcat(t,merge(r,b));
            
         }
-        else
-            return a;
+        else{
+            int t = b[0];
+            int[] r = new int[b.length-1];
+            for(int i = 0 ; i < r.length ; i++){
+                r[i]= b[i+1];
+            }
+            return mergeConcat(t,merge(a,r));
+        }
+    }
+    static int[]mergeConcat(int f,int[]s){
+        int[] b = new int[1+s.length];
+        b[0]=f;
+        for (int i = 1 ; i < b.length ; i++)
+            b[i]=s[i-1];
+        return b;
     }
 }
