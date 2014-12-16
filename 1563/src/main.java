@@ -12,7 +12,7 @@ public class main {
         for (int i = 0 ; i <= n ; i++){
             String t = in.nextLine();
             if (h.contains(t))
-            {c++;out.println(t);}
+                c++;
             else
                 h.add(t);
         }
