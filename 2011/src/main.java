@@ -14,4 +14,4 @@ public class main{
         out.println((Math.pow(3,a[0])*Math.pow(2,a[1])>=6)?"Yes":"No");
         out.flush();
     }
-}
+} 
