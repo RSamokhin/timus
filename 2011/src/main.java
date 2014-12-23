@@ -11,7 +11,39 @@ public class main{
             a[in.nextInt()-1]++;
         }
         Arrays.sort(a);
-        out.println((Math.pow(3,a[0])*Math.pow(2,a[1])>=6)?"Yes":"No");
+        if(n>5)
+            if (a[1]>0)
+                out.println("Yes");
+            else
+                out.println("No");
+        else{
+            switch(n){
+                case 1:
+                    out.println("No");
+                    break;
+                case 2:
+                    out.println("No");
+                    break;
+                case 3:
+                    if (a[0]>0)
+                        out.println("Yes");
+                    else 
+                        out.println("No");
+                    break;
+                case 4:  
+                    if ((a[0]>0)||a[1]>1)
+                        out.println("Yes");
+                    else
+                        out.println("No");
+                    break;
+                case 5:
+                    if ((a[1]>1)||((a[1]>0)&&(a[0]>0)))
+                        out.println("Yes");
+                    else
+                        out.println("No");
+                    break;
+            }
+        }
         out.flush();
     }
 } 
