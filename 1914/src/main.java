@@ -6,13 +6,10 @@ public class main{
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt(); int k = in.nextInt();
         long s = 0;
-        in.nextLine();
         while(in.hasNextLine()){
-            String p =in.nextLine();
-            String [] t = p.split(" ");
-            s+=Integer.parseInt(t[3])*Integer.parseInt(t[5]);
+            in.nextLine();
         }
-        out.println(s);
+        out.println((n*(n-1))/2-k);
         out.flush();
     }
 }
