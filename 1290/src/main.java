@@ -1,8 +1,11 @@
 import java.io.PrintWriter;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.Scanner;
 import java.util.HashMap;
+import java.util.List;
 public class main{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
@@ -17,12 +20,15 @@ public class main{
             }
         }
         Deque<Integer> a = new ArrayDeque<>();
-        a.addAll(h.values());
+        List list = new ArrayList();
+        list.addAll(h.values());
+        Collections.sort(list);
+        a.addAll(list);
         while (!a.isEmpty()){
-            int t=a.peekLast();
+            int t=a.peekFirst();
             out.println(a.size());
-            while((!a.isEmpty())&&(a.peekLast()==(t))){
-                a.removeLast();
+            while((!a.isEmpty())&&(a.peekFirst()==(t))){
+                a.removeFirst();
             }
         }
         out.flush();
