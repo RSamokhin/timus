@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 
 public class main {
     public static void main(String[] args) 
@@ -10,8 +11,9 @@ public class main {
             a[i]=(int)(Math.random()*1000);
             out.print(a[i]+" ");
         }
-        a = mergeSort(a,n);
+        //a = mergeSort(a,n);
         //a = bubbleSort(a);
+        a = minSort(a);
         out.println();
         for (int i:a)
             out.print(i+" ");
@@ -68,11 +70,24 @@ public class main {
             return mergeConcat(t,merge(a,r));
         }
     }
-    static int[]mergeConcat(int f,int[]s){
+    static int[] mergeConcat(int f,int[]s){
         int[] b = new int[1+s.length];
         b[0]=f;
         for (int i = 1 ; i < b.length ; i++)
             b[i]=s[i-1];
         return b;
+    }
+    static int[] minSort(int[]a){
+        for (int i = 0 ; i <a.length-1;i++){
+            int min = a[i];
+            for (int j = i+1 ; j<a.length;j++){
+                if (a[j]<min){
+                    min = a[j];
+                    a[j]=a[i];
+                    a[i]=min;
+                }
+            }
+        }
+        return a;
     }
 }
