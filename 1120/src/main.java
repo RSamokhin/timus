@@ -5,14 +5,14 @@ public class main{
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         long s = in.nextInt();
-        long i = 1;
-        double t = 1;
-        for(;i<s;i++){//26263 25600  1000000000
-            t =  (0-2*i+1+Math.sqrt((2*i-1)*(2*i-1)+8*s))/2;
-            if ((Math.floor(t)==t)&&(t>0))
+        double a = 1; 
+        double t = Math.floor(Math.sqrt(2*s+1));
+        for(;t>0;t--){
+            a = s/t - t/2+1;
+            if ((Math.floor(a))==a&&(a>0))
                 break;
         }
-        out.println(i+" "+(long)t);
+        out.println((long)a+" "+(long)t);
         out.flush();
     }
 }
