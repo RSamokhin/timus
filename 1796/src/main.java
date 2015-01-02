@@ -1,12 +1,10 @@
 import java.util.Scanner;
 import java.io.PrintWriter;
-import java.util.TreeSet;
 import java.util.TreeMap;
 public class main{
     public static void main(String[]args){
         Scanner in = new Scanner(System.in);
         PrintWriter out= new PrintWriter(System.out);
-        TreeSet<Integer> r = new TreeSet<>();
         TreeMap<Integer,Integer>a=new TreeMap<>();
         a.put(10,in.nextInt());
         a.put(50,in.nextInt());
@@ -16,24 +14,19 @@ public class main{
         a.put(5000,in.nextInt());
         int s = in.nextInt();
         int q = 0;
+        int e = 0;
         q = a.keySet().stream().map((t) -> t*a.get(t)).reduce(q, Integer::sum);
         for (int t:a.keySet()){
             if (a.get(t)>0){
-                int min = q/s-t/s;
-                while (min<q/s)
-                    r.add(++min);
-               /*int z = q-t;
-               while (z+s<=q){
-                   z+=s;
-                   r.add(z/s);
-               }*/
+               a.put(t,a.get(t)-1);
                break;
             }
         }
-        out.println(r.size());
-        r.stream().forEach((t) -> {
-            out.print(t+" ");
-        });
+        e = a.keySet().stream().map((t) -> t*a.get(t)).reduce(e, Integer::sum);
+        e=e/s;q=q/s;
+        out.println(q-e);
+        while(e<q)
+            out.print(++e+" ");
         out.flush();
     }
 }
