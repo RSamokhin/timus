@@ -21,7 +21,7 @@ public class main{
             if (a.get(t)>0){
                int z = q-t;
                while (z+s<=q){
-                   z+=s;
+                   z=z+s;
                    r.add(z/s);
                }
                break;
