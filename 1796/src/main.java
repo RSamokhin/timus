@@ -19,11 +19,14 @@ public class main{
         q = a.keySet().stream().map((t) -> t*a.get(t)).reduce(q, Integer::sum);
         for (int t:a.keySet()){
             if (a.get(t)>0){
-               int z = q-t;
+                int min = q/s-t/s;
+                while (min<q/s)
+                    r.add(++min);
+               /*int z = q-t;
                while (z+s<=q){
-                   z=z+s;
+                   z+=s;
                    r.add(z/s);
-               }
+               }*/
                break;
             }
         }
