@@ -14,7 +14,7 @@ public class main{
             a.add(in.nextDouble());
         Collections.sort(a);
         double s = a.get(a.size()-1)/4;
-        while(a.size()>1){
+        while(a.size()>0){
             s = 2*Math.sqrt(s*a.get(a.size()-1));
             a.remove(a.size()-1);
         }
