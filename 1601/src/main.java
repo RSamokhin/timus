@@ -5,9 +5,9 @@ public class main{
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         StringBuilder r=new StringBuilder();
-        char[] e;
-        while(!((e = in.nextLine().toCharArray()).length<1)&&in.hasNextLine()){
-            boolean b = true;
+        boolean b = true;
+        while(in.hasNextLine()){
+            char[] e = in.nextLine().toCharArray();
             for (char t:e)
                 if ((t>='A')&&(t<='Z'))
                     if (b==true){
@@ -18,7 +18,7 @@ public class main{
                 else
                     if ("!?.".indexOf(t)>=0){
                         r.append(t);
-                        b=false;
+                        b=true;
                     }else
                         r.append(t);
             r.append('\n');
