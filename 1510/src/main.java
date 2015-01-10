@@ -10,7 +10,7 @@ public class main{
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));        
         PrintWriter out = new PrintWriter(System.out);
         int n = Integer.parseInt(in.readLine());
-        List<Integer> h = new ArrayList<>();
+        List<Integer> h = new ArrayList<>(n);
         for (int i = 0 ; i < n ; i++){
             int t = Integer.parseInt(in.readLine());
             h.add(t);
