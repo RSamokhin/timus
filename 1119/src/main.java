@@ -21,30 +21,32 @@ public class main{
             h.put(y, t);
         }
         List<TreeMap<Integer,Integer>> l = new ArrayList<>();  // blank list of all possible paths
-        for (int i:h.keySet()){                                // y coordinate of existed diagonals
+        h.keySet().stream().forEach((i) -> {
+            // y coordinate of existed diagonals
             TreeSet<Integer> t = h.get(i);                     // set of x coordinates of existed diagonals
-            for (int u : t){                                   // every x of existed diagonals
+            t.stream().forEach((u) -> {
+                // every x of existed diagonals
                 boolean used = false;                          // if existed entry was used in list of paths 
                 int k = 0;
                 while (k<l.size()){
-                //for (TreeMap<Integer,Integer> o:l){            // look through every path of possible maps 
+                    //for (TreeMap<Integer,Integer> o:l){            // look through every path of possible maps 
                     TreeMap<Integer,Integer> o = l.get(k);
-                    if ((o.lastKey()<u)&&(o.get(o.lastKey())<i)){                        // 
-                         TreeMap<Integer,Integer> p = new TreeMap<>();
-                         p.putAll(o);//o;
-                         p.put(u, i);
-                         l.add(p);
-                         used=true;
+                    if ((o.lastKey()<u)&&(o.get(o.lastKey())<i)){                        //
+                        TreeMap<Integer,Integer> p = new TreeMap<>();
+                        p.putAll(o);
+                        p.put(u, i);
+                        l.add(p);
+                        used=true;
                     }
                     k++;
                 }
-                if (!used){
+                if (!used) {
                     TreeMap<Integer,Integer> s = new TreeMap<>();
                     s.put(u, i);
                     l.add(s);
                 }
-            }
-        }
+            });
+        });
         int maxD = 0;
         for  (TreeMap<Integer,Integer> j:l){
             maxD = (j.size()>maxD)?j.size():maxD;
