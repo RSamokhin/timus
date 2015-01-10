@@ -31,7 +31,7 @@ public class main{
                 while (k<l.size()){
                     //for (TreeMap<Integer,Integer> o:l){            // look through every path of possible maps 
                     TreeMap<Integer,Integer> o = l.get(k);
-                    if ((o.lastKey()<u)&&(o.get(o.lastKey())<i)){                        //
+                    if ((o.lastKey()<u)){                        //
                         TreeMap<Integer,Integer> p = new TreeMap<>();
                         p.putAll(o);
                         p.put(u, i);
