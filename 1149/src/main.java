@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 public class main {
-
     public static void a(int n) {
         for(int i=1;i<=n;i++){
             if(i==n){
@@ -18,7 +16,6 @@ public class main {
             System.out.print(")");
         }
     }
-
     public static void s(int n){
         for(int i=0;i<n-1;i++){
             System.out.print("(");
@@ -30,19 +27,9 @@ public class main {
         a(n);
         System.out.print("+1");
     }
-
     public static void main (String[] args) {
-        try {
-
             Scanner in = new Scanner(System.in);
-
             int n=in.nextInt();
-
             s(n);
-
-        } catch (Exception ex) {
-
-            System.out.println(ex.toString());
-        }
     }
 }
