@@ -7,16 +7,41 @@ public class main{
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt();
-        PriorityQueue<Integer> h = new PriorityQueue<>(n,Collections.reverseOrder());
-        for (int i = 0 ; i < n ; i++){
-            h.add(in.nextInt());
+        int s = 0;
+        int[] a = new int[n];
+
+        for(int i = 0 ; i < n ; i++){
+            int t = in.nextInt();
+            a[i] = t;
+            s += t;
         }
-        while(h.size()>1){
-            int a = h.poll();
-            int b = h.poll();
-            h.add(a-b);
+        int[] p = new int[s + 1];
+        p[0] = 1;
+
+        int y = 0;
+        for(int i = 0 ; i < n ; i++){
+            for(int j = y ; j >= 0  ; j--){
+                if(p[j]==1){
+                    p[j+a[i]]=1;
+                }
+            }
+            y += a[i];
         }
-        out.println(h.poll());
+
+        int r = s/2;
+        int g = 0;
+        for(int i = r ; i>=0 ; i--){
+            if(p[i]==1){
+                g = i;
+                break;
+            }
+        }
+        /*for(int j = 0 ; j < p.length  ; j++){
+            out.print(p[j]+" ");
+        }
+        out.println();*/
+        //out.println(p.length);
+        out.println(s - g*2);
         out.flush();
     }
 }
