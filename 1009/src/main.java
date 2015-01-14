@@ -5,23 +5,13 @@ public class main{
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
         int n = in.nextInt(),k = in.nextInt();
-        int allCount = getAllCount(k,n);
-        int b = (int)Math.pow(k,n-1);
-        int e = (int)Math.pow(k,n);
-        for (int i = b ; i < e ; i ++)
-            if (!checkIfCorret(Integer.toString(i, k)))
-                allCount--;
-        out.println(allCount);
+        int[] r = new int[n];
+        r[0]=k-1;
+        r[1]=k*r[0];
+        for(int i=2;i<n;i++){
+            r[i]=(r[i-1]+r[i-2])*(k-1);
+        }
+        out.println(r[n-1]);
         out.flush();
-    }
-    private static int getAllCount(int k,int n){
-        if(n>1)    
-            return (k)*getAllCount(k,n-1);
-        return (k-1);
-    }
-    private static boolean checkIfCorret (String a){
-        if (a.contains("00"))
-            return false;
-        return true;
     }
 }
