@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.io.PrintWriter;
-public class main{
+public class t2010{
     public static void main(String[]args){
         int n = 0;
         Scanner in = new Scanner(System.in);

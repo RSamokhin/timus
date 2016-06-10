@@ -4,7 +4,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.List;
 import java.util.ArrayList;
-public class main{
+public class t1119{
     public static void main(String[]args){
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);

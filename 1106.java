@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.HashSet;
 import java.util.TreeSet;
-public class main{
+public class t1106{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);

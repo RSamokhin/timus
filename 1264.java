@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class t1264 {
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);

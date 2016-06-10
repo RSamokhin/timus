@@ -4,7 +4,7 @@ import java.util.List;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-public class main{
+public class t1161{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);

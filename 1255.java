@@ -1,6 +1,6 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
-public class main{
+public class t1255{
     public static void main(String[]args){
         PrintWriter out = new PrintWriter(System.out);
         Scanner in = new Scanner(System.in);

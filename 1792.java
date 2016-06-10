@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.PrintWriter;
 
-public class main{
+public class t1792{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);

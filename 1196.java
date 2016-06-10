@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class main {
+public class t1196 {
     public static void main(String[] args) throws IOException
     {
         BufferedInputStream bis = new BufferedInputStream(System.in);

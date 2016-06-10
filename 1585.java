@@ -4,7 +4,7 @@ import java.math.*;
 import java.text.*;
 
 
-public class Main {
+public class t1585 {
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);

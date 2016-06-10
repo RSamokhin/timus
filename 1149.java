@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class main {
+public class t1149 {
     public static void a(int n) {
         for(int i=1;i<=n;i++){
             if(i==n){

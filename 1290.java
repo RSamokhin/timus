@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 import java.util.List;
-public class main{
+public class t1290{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);

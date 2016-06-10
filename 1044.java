@@ -2,7 +2,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class Main
+public class t1044
 {
     public static void main (String[] args) throws java.lang.Exception
     {
