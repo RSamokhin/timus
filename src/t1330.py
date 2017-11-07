@@ -7,5 +7,5 @@ for i in range(n):
 
 q = int(sys.stdin.readline())
 for i in range(q):
-    # inputs = map(lambda x: int(x), sys.stdin.readline().split(' '))
+    inputs = map(lambda x: int(x), sys.stdin.readline().split(' '))
     print sums[inputs[1]] - sums[inputs[0] - 1]
