@@ -9,9 +9,8 @@ var fizzBuzz = function(n) {
     let result = [];
     for (let i = 1; i <= n; i++) {
         let np = i.toString();
-        console.log(fizz);
         if (fizz === 3 && buzz === 5) {
-            np = `${FIZZ}${BUZZ}`;
+            np = FIZZ + BUZZ;
             fizz = 1;
             buzz = 1;
         } else if (buzz === 5) {
