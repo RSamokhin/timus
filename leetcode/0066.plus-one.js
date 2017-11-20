@@ -12,7 +12,7 @@ var plusOne = function(digits) {
         }
         let newDigit = digits[index] + add;
         digits[index] = newDigit % 10;
-        add = newDigit > 9
+        add = newDigit > 9;
         index --;
     }
     return digits;
