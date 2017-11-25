@@ -14,7 +14,7 @@ var isHappy = function(n) {
             sumsSet.add(n);
         }
     }
-    return n === 1 ? true : false;
+    return n === 1;
 };
 
 function splitOnDigits (n) {
