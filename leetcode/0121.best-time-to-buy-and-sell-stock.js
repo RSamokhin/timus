@@ -11,3 +11,21 @@ var maxProfit = function(prices) {
     }
     return maxProfit
 };
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    let minPrice = Number.MAX_SAFE_INTEGER;
+    let maxProfit = 0;
+    prices.forEach(p => {
+        if (p < minPrice) {
+           minPrice = p;
+        } else {
+            maxProfit = Math.max(p - minPrice, maxProfit);
+        }
+
+    });
+    return maxProfit
+};
