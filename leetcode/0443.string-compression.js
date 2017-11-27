@@ -20,7 +20,7 @@ var compress = function(chars) {
 
             //start new char
             prevChar = chars[i];
-            length++
+            length++;
             chars[length] = chars[i];
             prevChar = chars[i];
             charCount = 1;
