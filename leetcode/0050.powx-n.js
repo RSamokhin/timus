@@ -24,7 +24,7 @@ var myPow = function(x, n) {
     }
     function calcPowRecursive(x, n) {
         if (n > 1) {
-            let halfPowN = Math.round(n / 2)
+            let halfPowN = Math.round(n / 2);
             let halfPow = calcPowRecursive(x, halfPowN);
              return halfPow * halfPow / (Math.round(n / 2) === n / 2 ? 1 : x);
         }
