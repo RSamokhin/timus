@@ -14,3 +14,13 @@ var hammingDistance = function(x, y) {
     }
     return result;
 };
+
+/**
+ * @param {number} x
+ * @param {number} y
+ * @return {number}
+ */
+var hammingDistance = function(x, y) {
+    let result = ((x) ^ (y)).toString(2);
+    return result > 0 ? result.match(/1/g).length : 0;
+};
