@@ -25,7 +25,7 @@ var reverseWords = function(s) {
         let result = '';
         arr.forEach((w, i) => {
             result += w;
-            if (i != arr.length - 1) {
+            if (i !== arr.length - 1) {
                 result += sep;
             }
         });
